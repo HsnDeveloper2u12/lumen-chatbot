@@ -1,0 +1,96 @@
+:root {
+  /* Premium dark palette — deep aubergine-charcoal surface with
+     gold / emerald / magenta / sapphire jewel-tone accents. */
+  --bg: #120f1e;
+  --surface: #1c1832;
+  --surface-soft: #241f3d;
+  --surface-raised: #2a2447;
+  --ink: #f5f2ff;
+  --ink-muted: #ada8cf;
+  --ink-faint: #837faa;
+  --border: #362f5a;
+
+  --gold: #f2c14e;
+  --gold-dark: #c9942a;
+  --emerald: #1fd18f;
+  --magenta: #ef4795;
+  --sapphire: #5b7fff;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 14px 34px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 26px 60px rgba(0, 0, 0, 0.55);
+  --glow-gold: 0 0 24px rgba(242, 193, 78, 0.35);
+  --glow-magenta: 0 0 26px rgba(239, 71, 149, 0.35);
+  --glow-sapphire: 0 0 26px rgba(91, 127, 255, 0.35);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --font-display: "Sora", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--ink);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--magenta);
+  color: #fff;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Visible keyboard focus for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
